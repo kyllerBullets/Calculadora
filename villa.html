@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Calculadora</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-color: #000000;
+            /* cor de fundo preto */
+            color: #ffffff;
+            /* cor do texto branco */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+            /* posiciona o contêiner */
+        }
+
+        .container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container h1 {
+            position: absolute;
+            /* posiciona o título */
+            top: 0;
+            /* alinha o título no topo da imagem */
+            left: 50%;
+            /* alinha o título no centro horizontal da imagem */
+            transform: translate(-50%, 0);
+            /* centraliza o título */
+            margin: 0;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* fundo preto com transparência */
+            font-size: 48px;
+            text-align: center;
+            line-height: 1.2;
+        }
+        
+    </style>
+</head>
+
+<body class="container">
+    <div class="container">
+        <div class="image-container">
+            <img src="img/NADA HAVER2.png" alt="descrição da imagem" srcset="img/NADA HAVER2-480w.png 480w,
+    	             img/NADA HAVER2-768w.png 768w,
+    	             img/NADA HAVER2-1200w.png 1200w" sizes="(max-width: 480px) 100vw,
+    	            (max-width: 768px) 100vw,
+    	            1200px">
+                    
+            <h1>MECÂNICA</h1>
+        </div>
+    </div>
+    
+    <div class="form-container">
+        <div style="font-size: 130%;">
+        <form id="form1">
+            <fieldset>
+                <legend style="text-align: center;">Tunagem</legend>
+                <input type="checkbox" name="valor3" id="tuning" value="350.000" onclick="calcularValor()"><label for="tuning">
+                Full Tuning</label> <br>
+            </fieldset>
+        </form>
+        </div>
+        
+        <style>
+                    .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .button2 {background-color: #008CBA;} /* Blue */
+        .button3 {background-color: #f44336;} /* Red */ 
+        .button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+        .button5 {background-color: #555555;} /* Black */
+
+            input[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+                vertical-align: middle;
+            }
+        
+            label {
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+        </style>
+        
+        <div style="font-size: 130%; width: 120%; top: 50%;">
+            <form id="form2">
+                <fieldset>
+                    <legend style="text-align: center;">Estéticas</legend>
+                    <div style="display: inline-block; width: 45%;">
+                        <input type="checkbox" name="valor3" id="c" value="10.000" onclick="calcularValor()"><label for="c">
+                            Cor Primária</label><br>
+                        <input type="checkbox" name="valor3" id="rod" value="10.000" onclick="calcularValor()"><label for="rod">
+                            Roda</label><br>
+                        <input type="checkbox" name="valor3" id="f" value="10.000" onclick="calcularValor()"><label for="f">
+                            Parachoque D</label><br>         
+                        <input type="checkbox" name="valor3" id="buz" value="10.000" onclick="calcularValor()"><label for="buz">
+                            Buzina</label> <br>
+                        <input type="checkbox" name="valor3" id="cap" value="10.000" onclick="calcularValor()"><label for="cap">
+                            Capô</label><br>
+                        <input type="checkbox" name="valor3" id="esca" value="10.000" onclick="calcularValor()"><label for="esca">
+                            Escape</label> <br>
+                        <input type="checkbox" name="valor3" id="tet" value="10.000" onclick="calcularValor()"><label for="tet">
+                            Teto</label><br>   
+                        <input type="checkbox" name="valor3" id="pla" value="10.000" onclick="calcularValor()"><label for="pla">
+                            Placa</label><br>
+                        <input type="checkbox" name="valor3" id="fum" value="10.000" onclick="calcularValor()"><label for="fum">
+                            Fumaça</label><br>
+                        <input type="checkbox" name="valor3" id="pai" value="10.000" onclick="calcularValor()"><label for="pai">
+                            Painel</label><br>
+
+                    </div>
+                    <div style="display: inline-block; width: 45%;">
+                        <input type="checkbox" name="valor3" id="c" value="10.000" onclick="calcularValor()"><label for="c">
+                            Cor Secundária</label><br>
+                        <input type="checkbox" name="valor3" id="a" value="10.000" onclick="calcularValor()"><label for="a">
+                            Cor da Roda</label><br>
+                        <input type="checkbox" name="valor3" id="f" value="10.000" onclick="calcularValor()"><label for="f">
+                            Parachoque T</label><br>
+                        <input type="checkbox" name="valor3" id="b" value="10.000" onclick="calcularValor()"><label for="b">
+                            Grelha</label><br>    
+                        <input type="checkbox" name="valor3" id="b" value="10.000" onclick="calcularValor()"><label for="b">
+                            Aerofólio</label><br>
+                        <input type="checkbox" name="valor3" id="d" value="10.000" onclick="calcularValor()"><label for="d">
+                            Gaiola</label><br>
+                        <input type="checkbox" name="valor3" id="e" value="10.000" onclick="calcularValor()"><label for="e">
+                            Insulfilm</label><br>
+                        <input type="checkbox" name="valor3" id="g" value="10.000" onclick="calcularValor()"><label for="g">
+                            Adesivos</label><br>
+                        <input type="checkbox" name="valor3" id="h" value="10.000" onclick="calcularValor()"><label for="h">
+                            Para-lama</label><br>
+                        <input type="checkbox" name="valor3" id="i" value="10.000" onclick="calcularValor()"><label for="i">
+                            Saias-Laterais</label><br>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>    
+    <div class="form-wrapper2"
+        style="position: absolute; top: 8%; left: 34%; height: 100%; padding: 20px; text-align: center; font-size: 130%;">
+        <form id="form3">
+            <fieldset style="text-align: start;">
+                <legend style="text-align: center;">Luzes</legend>
+                <input type="checkbox" name="valor3" value="25.000" id="opcao1" onclick="calcularValor()">
+                <label for="opcao1">Farol</label>
+                <input type="checkbox" name="valor3" value="25.000" id="opcao2" onclick="calcularValor()">
+                <label for="opcao2">Neon</label>
+                <input type="checkbox" name="valor3" value="15.000" id="opcao3" onclick="calcularValor()">
+                <label for="opcao3">Troca apenas da cor</label>
+
+                
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="form-wrapper3"
+        style="position: absolute; top: 9.2%; left: 81.5%; height: 100%; padding: 20px; text-align: center; font-size: 120%;">
+        <form id="form5">
+            <fieldset style="text-align: start;">
+                <legend style="text-align: center;">Rep</legend>
+                <input type="checkbox" name="valor3" value="5.000" id="opcao9" onclick="calcularValor()">
+                <label for="opcao9">Reparo</label>
+
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="form-wrapper4"
+        style="position: absolute; top: 18%; left: 34%; height: 100%; padding: 20px; text-align: center; font-size: 130%;">
+        <form id="form6">
+            <fieldset style="text-align: start;">
+                <legend style="text-align: center;">Motor</legend>
+                <input type="checkbox" name="valor3" value="20.000" id="opcao20" onclick="calcularValor()">
+                <label for="opcao20">Level 1</label>
+                <input type="checkbox" name="valor3" value="40.000" id="opcao21" onclick="calcularValor()">
+                <label for="opcao21">Level 2</label>
+                <input type="checkbox" name="valor3" value="70.000" id="opcao22" onclick="calcularValor()">
+                <label for="opcao22">Level 3</label>
+                <input type="checkbox" name="valor3" value="100.000" id="opcao23" onclick="calcularValor()">
+                <label for="opcao23">Level 4</label>
+    
+            </fieldset>
+        </form>
+    </div>
+        <div class="form-wrapper4"
+            style="position: absolute; top: 27%; left: 34%; height: 100%; padding: 20px; text-align: center; font-size: 130%;">
+            <form id="form6">
+                <fieldset style="text-align: start;">
+                    <legend style="text-align: center;">Transmissão</legend>
+                    <input type="checkbox" name="valor3" value="60.000" id="opcao24" onclick="calcularValor()">
+                    <label for="opcao24">Level 1</label>
+                    <input type="checkbox" name="valor3" value="80.000" id="opcao25" onclick="calcularValor()">
+                    <label for="opcao25">Level 2</label>
+                    <input type="checkbox" name="valor3" value="100.000" id="opcao26" onclick="calcularValor()">
+                    <label for="opcao26">Level 3</label>
+                    <input type="checkbox" name="valor3" value="120.000" id="opcao27" onclick="calcularValor()">
+                    <label for="opcao27">Level 4</label>
+                    <input type="checkbox" name="valor3" value="150.000" id="opcao28" onclick="calcularValor()">
+                    <label for="opcao28">Level 5</label>
+        
+                </fieldset>
+            </form>
+        </div>
+        <div class="form-wrapper4"
+            style="position: absolute; top: 37%; left: 34%; height: 100%; padding: 20px; text-align: center; font-size: 130%;">
+            <form id="form6">
+                <fieldset style="text-align: start;">
+                    <legend style="text-align: center;">Freio</legend>
+                    <input type="checkbox" name="valor3" value="20.000" id="opcao29" onclick="calcularValor()">
+                    <label for="opcao29">Level 1</label>
+                    <input type="checkbox" name="valor3" value="40.000" id="opcao30" onclick="calcularValor()">
+                    <label for="opcao30">Level 2</label>
+                    <input type="checkbox" name="valor3" value="60.000" id="opcao31" onclick="calcularValor()">
+                    <label for="opcao31">Level 3</label>
+        
+                </fieldset>
+            </form>
+        </div>
+        <div class="form-wrapper4"
+            style="position: absolute; top: 47%; left: 34%; height: 100%; padding: 20px; text-align: center; font-size: 130%;">
+            <form id="form6">
+                <fieldset style="text-align: start;">
+                    <legend style="text-align: center;">Suspensão</legend>
+                    <input type="checkbox" name="valor3" value="10.000" id="opcao32" onclick="calcularValor()">
+                    <label for="opcao32">Level 1</label>
+                    <input type="checkbox" name="valor3" value="20.000" id="opcao33" onclick="calcularValor()">
+                    <label for="opcao33">Level 2</label>
+                    <input type="checkbox" name="valor3" value="30.000" id="opcao34" onclick="calcularValor()">
+                    <label for="opcao34">Level 3</label>
+                    <input type="checkbox" name="valor3" value="50.000" id="opcao35" onclick="calcularValor()">
+                    <label for="opcao35">Level 4</label>
+                    <input type="checkbox" name="valor3" value="70.000" id="opcao36" onclick="calcularValor()">
+                    <label for="opcao36">Level 5</label>
+        
+                </fieldset>
+            </form>
+        </div>
+        <div class="form-wrapper4"
+            style="position: absolute; top: 57%; left: 34%; height: 100%; padding: 20px; text-align: center; font-size: 130%;">
+            <form id="form6">
+                <fieldset style="text-align: start;">
+                    <legend style="text-align: center;">Turbo</legend>
+                    <input type="checkbox" name="valor3" value="50.000" id="opcao37" onclick="calcularValor()">
+                    <label for="opcao37">Level 1</label>
+        
+                </fieldset>
+            </form>
+        </div>
+    <div class="form-wrapper2"
+        style="position: absolute; top: 57%; left:44.5%; height: 100%; padding: 20px; text-align: center; font-size: 130%;">
+        <form id="form5">
+            <fieldset style="text-align: start;">
+                <legend style="text-align: center;">Blindagem</legend>
+                <input type="checkbox" name="valor3" value="600.000" id="o" onclick="calcularValor()">
+                <label for="o">Blindagem (max)</label>
+                <input type="checkbox" name="valor3" value="1000.000" id="j" onclick="calcularValor()">
+                <label for="j">Blindagem (pneu)</label>
+                <input type="checkbox" name="valor3" value="700.000" id="j" onclick="calcularValor()">
+                <label for="j">Kit Nitro</label>
+    
+            </fieldset>
+        </form>
+    </div>
+        
+        
+                </fieldset>
+            </form>
+        </div>
+        <div>
+        <div
+            style="position: absolute; top: 40%; left: 87%; transform: translate(-50%, -50%); max-width: 90%; font-size: 2em; text-align: center;">
+            <fieldset>
+                <label style="display: block; margin-bottom: 10px;" for="resultado">Valor Total:</label>
+                <input style="display: block; margin: 0 auto 10px; width: 100%; font-size: 0.7em;" type="text" id="resultado"
+                    value="0" readonly>
+                    <button type="button" class="button button2" onclick="aplicarDesconto()">10% DE DESCONTO</button>
+                
+                    <button type="button" class="button button2" onclick="limparTudo()">LIMPAR RESULTADOS</button>
+            </fieldset>
+            <!-- Botão para limpar resultado e checkboxes -->
+         
+           
+           
+            <!-- Script para limpar resultado e checkboxes -->
+            <script>
+                function limparTudo() {
+                    // Limpar o input resultado
+                    document.getElementById("resultado").value = "";
+
+                    // Desmarcar todas as checkboxes
+                    var checkboxes = document.getElementsByName("valor3");
+                    for (var i = 0; i < checkboxes.length; i++) {
+                        checkboxes[i].checked = false;
+                    }
+                }
+            </script>
+
+    <script>
+function aplicarDesconto() {
+  const resultadoInput = document.getElementById("resultado");
+  const valorAtual = parseFloat(resultadoInput.value.replace("R$", "").replace(/\./g, "").replace(",", "."));
+  let valorDescontado;
+
+  if (valorAtual <= 999999) {
+    valorDescontado = valorAtual * 0.9;
+    resultadoInput.value = "R$" + valorDescontado.toLocaleString('pt-BR', { minimumFractionDigits: 3, maximumFractionDigits: 3 });
+  } else {
+    valorDescontado = valorAtual * 0.9;
+    resultadoInput.value = "R$" + valorDescontado.toLocaleString('pt-BR', { minimumFractionDigits: 6, maximumFractionDigits: 6 });
+  }
+}
+
+
+
+
+    </script>
+<script>
+    function calcularValor() {
+  const inputs = document.querySelectorAll('input[type="checkbox"]');
+  const resultado = document.querySelector('#resultado');
+  let soma = 0;
+  inputs.forEach(input => {
+    if (input.checked) {
+      soma += parseInt(input.value);
+    }
+  });
+  resultado.value = 'R$ ' + soma.toLocaleString('pt-BR', { minimumFractionDigits: 3, maximumFractionDigits: 3 });
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
